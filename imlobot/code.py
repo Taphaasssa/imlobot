@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ParseMode
 from checking import forwork
 
-API_TOKEN = '7375391684:AAGGESZyRoniMi4WLyIBrTvRCmK-RTZLoQM'
+API_TOKEN = '7405202068:AAGUr7xHJhEG_7rNxYH_jKUQecP3N8ah4aA'
 ADMIN_ID = '6146446977'  # Replace with your Telegram user ID
 
 # Configure logging
