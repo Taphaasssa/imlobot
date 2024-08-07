@@ -13,11 +13,17 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-# In-memory storage for user messages
+# In-memory storage for user data and messages
 user_data = {}
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
+    user_id = str(message.from_user.id)
+    username = message.from_user.username
+
+    if user_id not in user_data:
+        user_data[user_id] = {'username': username, 'messages': []}
+
     await message.reply("Assalomu alaykum.😉\n\nImlo tekshiruvchi to'g'riso'z botimizga xush kelibsiz")
 
 @dp.message_handler(commands=['help'])
